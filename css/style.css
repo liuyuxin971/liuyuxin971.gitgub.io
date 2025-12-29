@@ -1,0 +1,215 @@
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 头部样式 */
+header {
+    background: linear-gradient(135deg, #004792 0%, #002954 100%);
+    color: white;
+    padding: 3.5rem 2rem;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 41, 84, 0.2);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+}
+
+.motto {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* 数据统计区域 */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.8rem 1rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    color: #004792;
+    margin-bottom: 1rem;
+}
+
+.stat-card h3 {
+    color: #004792;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* 学校简介 */
+.intro {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.intro h2 {
+    color: #004792;
+    border-left: 5px solid #E63946;
+    padding-left: 15px;
+    margin-bottom: 1.8rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.intro p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+/* 学院网格 */
+.colleges-section {
+    margin-bottom: 3rem;
+}
+
+.colleges-section h2 {
+    color: #004792;
+    border-left: 5px solid #004792;
+    padding-left: 15px;
+    margin-bottom: 0.8rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-desc {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.colleges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.college-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-top: 4px solid #004792;
+}
+
+.college-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 41, 84, 0.15);
+}
+
+.college-icon {
+    font-size: 2.5rem;
+    color: #004792;
+    margin-bottom: 1.2rem;
+}
+
+.college-card h3 {
+    color: #004792;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.college-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.college-link {
+    color: #E63946;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #002954;
+    color: white;
+    border-radius: 15px 15px 0 0;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #64b5f6;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    header h1 { font-size: 2.3rem; }
+    .subtitle { font-size: 1.2rem; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .colleges-grid { grid-template-columns: 1fr; }
+    .intro, .college-card { padding: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+    .stats { grid-template-columns: 1fr; }
+}
